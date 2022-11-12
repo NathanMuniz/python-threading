@@ -1,15 +1,17 @@
+import time 
 import concurrent.futures
-import time
-from unittest import result 
 
-def so_something(seconds):
-	print(f'Sleeping {seconds} second(s)...')
-	time.sleep(seconds)
-	
-	return f'Done Sleeping...{seconds} seconds...'
 
-with concurrent.futures.ThreadPoolExecutor() as executer:
-	result = [executer.submit(so_something, 2) for _ in range(10)]
+def do_something(seconds):
+    print(f"Sleeping for {seconds} seconds")
+    time.sleep(seconds)
+    return "Finished thread " 
 
-	for f in concurrent.futures.as_completed(result):
-		print(f.result())	
+
+
+with concurrent.futures.ThreadPoolExecutor() as executor:
+    threads = [executor.submit(do_something, 2) for _ in range(10)]
+
+    for thread in threads:
+        print(thread.result())
+

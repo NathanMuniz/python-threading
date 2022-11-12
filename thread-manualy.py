@@ -1,26 +1,23 @@
-from time import sleep, perf_counter
+import time 
 import threading
 
+start = time.perf_counter()
 
-start_time = perf_counter()
-
-def dosomething(seconds):
-    print(f"Ill sleep {seconds}... ")
-    sleep(seconds)
-    print("Wakeup")
+def do_somethings(seconds):
+    print(f"Sleeping {seconds} seconds...")
+    time.sleep(seconds)
+    print('Done Sleeping...')
 
 threads = []
 
 for _ in range(10):
-    t = threading.Thread(target=dosomething, args=[1.5])
+    t = threading.Thread(target=do_somethings, args=[1.5])
     t.start()
     threads.append(t)
 
 for thread in threads:
     thread.join()
 
-finish_time = perf_counter()
+finish = time.perf_counter()
 
-print(f"The code takes {finish_time - start_time} minutos to execute")
-
-
+print(f"Finished in {round(finish-start, 2)} seconds(s)")
