@@ -8,4 +8,4 @@ inicio = perf_counter()
 
 pausa = perf_counter()
 
-final_time = inicio - pausa
+temp_final = inicio - pausa
