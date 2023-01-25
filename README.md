@@ -7,6 +7,17 @@ Uma forma de ver com clareza como o uso de Threads pode ser útil é contabiliza
 
 Para isso, iremos usar o método ****************************perf_counter**************************** que retorna o tempo de execução do código até o momento em que ele foi chamado. Sendo assim, marcamos um ************início,************ o momento em que queremos **********parar********** de marcar, e a diferença entre eles será o tempo final. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d83db512-3be9-4b0a-8d59-dca594185b8f/Untitled.png)
+```python
+from time import perf_counter
 
+incio = perf_counter()
+
+## code 
+
+pausa = perf_counter()
+
+final = inicio - pausa
+```
+
+more..
 more….
