@@ -1,9 +1,7 @@
 # python-threading
 learning to manage threading in python.
 
-## Exemplo 1
-
-[ex1](exemplos/ex1.py)
+## Exemplo 1 [ex1](exemplos/ex1.py)
 
 Uma forma de ver com clareza como o uso de Threads pode ser útil é contabilizando o tempo que seu código executa ************************sem threads************************ e **************com threads**************. 
 
