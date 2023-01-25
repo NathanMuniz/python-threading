@@ -10,7 +10,7 @@ Para isso, iremos usar o método ****************************perf_counter*******
 ```python
 from time import perf_counter
 
-incio = perf_counter()
+inicio = perf_counter()
 
 ## code 
 
@@ -20,4 +20,3 @@ final = inicio - pausa
 ```
 
 more..
-more….
